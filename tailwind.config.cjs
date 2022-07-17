@@ -12,7 +12,7 @@ module.exports = {
         "n-very-dark-blue": "hsl(216, 12%, 8%)",
       },
       fontFamily: {
-        body: ["Overpass", "san-serif"],
+        body: ["Overpass", "sans-serif"],
       },
     },
   },
