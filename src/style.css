@@ -3,3 +3,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .card {
+    background: theme("colors.n-dark-blue");
+    margin-bottom: 2em; /*! to delete */
+    border-radius: theme("borderRadius.2xl");
+    padding-inline: theme("padding.5");
+    padding-top: theme("padding.8");
+    padding-bottom: theme("padding.8");
+    max-width: 21.4375rem;
+  }
+
+  @media (min-width: 48rem) {
+    .card {
+      max-width: theme("maxWidth.sm");
+      border-radius: theme("borderRadius.3xl");
+      padding-inline: theme("padding.6");
+      padding-block: theme("padding.9");
+    }
+  }
+
+  .card__header {
+    font-size: theme("fontSize.2xl");
+    font-weight: theme("fontWeight.bold");
+    color: theme("colors.n-white");
+    margin-top: theme("margin[3.5]");
+  }
+
+  .card__copy {
+    margin-top: theme("margin[2.5]");
+  }
+
+  .circle {
+    border-radius: theme("borderRadius.full");
+    background-color: theme("colors.n-medium-gray");
+    flex-basis: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .circle:hover,
+  .circle:focus {
+    background-color: theme("colors.n-light-gray");
+    color: theme("colors.n-white");
+  }
+
+  .circle:active {
+    background-color: theme("colors.p-orange");
+  }
+
+  .circle.selected {
+    background-color: theme("colors.p-orange");
+    color: theme("colors.n-white");
+  }
+
+  .button {
+    margin-top: theme("margin.6");
+    background-color: theme("colors.p-orange");
+    color: theme("colors.n-white");
+    width: 100%;
+    border-radius: 9rem;
+    padding: theme("padding[2.5]");
+    text-transform: uppercase;
+    letter-spacing: theme("letterSpacing.widest");
+  }
+}

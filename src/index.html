@@ -7,36 +7,63 @@
     <title>Interactive Rating Component</title>
     <script type="module" defer src="main.js"></script>
   </head>
-  <body class="text-[0.9375rem] font-body font-normal">
-    <main>
-      <div class="card">
-        <img src="images/icon-star.svg" alt="" />
-        <h1>How did we do?</h1>
-        <p>
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <div>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-        </div>
-        <button type="submit">Submit</button>
-      </div>
 
-      <div class="card">
-        <img src="images/illustration-thank-you.svg" alt="" />
-        <div>
-          <p>You selected <span></span> out of 5</p>
+  <body
+    class="text-[0.9375rem] font-body font-normal bg-n-very-dark-blue text-n-light-gray"
+  >
+    <div class="grid h-screen place-items-center">
+      <main class="px-4">
+        <!-- rating -->
+        <div class="card">
+          <div class="inline-block bg-n-medium-gray rounded-full p-3">
+            <img src="images/icon-star.svg" alt="" />
+          </div>
+          <h1 class="card__header">How did we do?</h1>
+
+          <p class="card__copy">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <div class="flex gap-6 mt-5">
+            <div tabindex="0" class="circle">1</div>
+            <div tabindex="0" class="circle">2</div>
+            <div tabindex="0" class="circle">3</div>
+            <div tabindex="0" class="circle">4</div>
+            <div tabindex="0" class="circle">5</div>
+          </div>
+          <button
+            type="submit"
+            class="button active:bg-n-white active:text-p-orange focus:bg-orange-600 hover:bg-orange-600"
+          >
+            Submit
+          </button>
         </div>
-        <h2>Thank you!</h2>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don't hesitate to get in touch
-        </p>
-      </div>
-    </main>
+
+        <!-- thank you -->
+        <div class="card">
+          <div class="flex justify-center">
+            <img src="images/illustration-thank-you.svg" alt="" />
+          </div>
+
+          <div class="mt-7 text-center">
+            <p
+              class="text-p-orange bg-n-medium-gray rounded-full p-1 px-6 inline-block"
+            >
+              You selected <span id="rating"></span> out of 5
+            </p>
+          </div>
+
+          <div class="card__header text-center mt-6" data-text="center">
+            <h2>Thank you!</h2>
+          </div>
+
+          <p class="card__copy text-center">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch
+          </p>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
