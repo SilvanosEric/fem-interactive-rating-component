@@ -12,11 +12,11 @@
     class="text-[0.9375rem] font-body font-normal bg-n-very-dark-blue text-n-light-gray"
   >
     <div class="grid h-screen place-items-center">
-      <main class="px-4">
+      <main class="px-6">
         <!-- rating -->
         <div id="rCard" class="card">
           <div class="inline-block bg-n-medium-gray rounded-full p-3">
-            <img src="images/icon-star.svg" alt="" />
+            <img src="images/icon-star.svg" alt="" class="md:p-1" />
           </div>
           <h1 class="card__header">How did we do?</h1>
 
@@ -25,7 +25,7 @@
             feedback is appreciated to help us improve our offering!
           </p>
 
-          <div class="flex gap-6 mt-5">
+          <div id="numbers" class="flex mt-7 justify-between">
             <button type="button" tabindex="0" data-rate="1" class="circle">
               1
             </button>
@@ -42,6 +42,7 @@
               5
             </button>
           </div>
+
           <button
             id="button"
             type="submit"
@@ -53,12 +54,12 @@
 
         <!-- thank you -->
         <!-- hidden by default -->
-        <div id="tCard" class="card hidden">
+        <div id="tCard" class="card hidden mt-2 md:pt-11 md:pb-10">
           <div class="flex justify-center">
             <img src="images/illustration-thank-you.svg" alt="" />
           </div>
 
-          <div class="mt-7 text-center">
+          <div class="mt-8 text-center">
             <p
               class="text-p-orange bg-n-medium-gray rounded-full p-1 px-6 inline-block"
             >
@@ -66,13 +67,13 @@
             </p>
           </div>
 
-          <div class="card__header text-center mt-6">
+          <div class="card__header text-center mt-6 md:mt-8">
             <h2>Thank you!</h2>
           </div>
 
           <p class="card__copy text-center">
             We appreciate you taking the time to give a rating. If you ever need
-            more support, don't hesitate to get in touch
+            more support, don't hesitate to get in touch!
           </p>
         </div>
       </main>
