@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABO1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////l9Pff8fS54ein2eOn2eL9/v684unr9vj7/f7c8PSl2eKHzNil2OLv+Prz+vue1eB3xdOq2uPm9Pf29/vy8/n3/Py13+eEyteZ097P6u/2+/zByeKOm8r8/f7u+Pq+4+qOz9uU0dzo9fjb4O5meLbh5fH0+vvV7fHx+fv8/P2Gk8Wbps+44eim2eLW2+xkdrXO1Oit3OWttthperja3u7u+Pn6+/2hrNJneLfFy+P7+/23v92IlcbN0ufx8/nj5/Kbp9BsfbltfrqAj8ORnsvg5PD+/v/v8ffQ1em0vduqtNfn6vS/61TcAAAAHHRSTlMAAAQqbK3Z8v0DN5ff+xqJ6jbC/kHBAjjp3qz8qSKHsgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfiChMPAx5FOtlkAAABSUlEQVQ4y4WTZ2OCMBCGc4IMEXAPjB10771t7dLuXbv3/v+/oNigIYjN+4HcJU9CcgMhVxASxLAkK4oshUUhBIgVqBEtqmNXelSLqF4EwDBjmFHMNADoejyRxD4lE/EGAZCScICkFCGc/YHrDkHOACON2yhtOABkTNxWZgYQZHPeqWKH18tlAakas6ezi3E1FQl5Fuhm3LyARD0AsIs9vSSmIrJwC9DXPzA4NEx8C0ktwMjo2PiE3YgFkokxOdUEpmdm5+YXXEBGCjEWl5bpHVZKq2tlMq+gAjHWNza9r9jarpD5QuMX1Z3dv3Fvn72T3LzkweFRfSgd+xJGn3lyeuZ8K+csYNFAXVzWrqr+bDmBoqG+vqnd3t3bDOCE2push8en55fXNzZZTLrfPz6/vn+oX083t2C4JccvWm7Z8xuH33r85v2v/X8Bp/FiyVLnL/0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTAtMTlUMTU6MDM6MzArMDI6MDCzEaEaAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEwLTE5VDE1OjAzOjMwKzAyOjAwwkwZpgAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Rating Component</title>
+    
+    <script type="module" crossorigin src="./assets/index.8548ded9.js"></script>
+    <link rel="stylesheet" href="./assets/index.b4c47e2e.css">
+  </head>
+
+  <body
+    class="text-[0.9375rem] font-body font-normal bg-n-very-dark-blue text-n-light-gray"
+  >
+    <div class="grid h-screen place-items-center">
+      <main class="px-6">
+        <!-- rating -->
+        <div id="rCard" class="card">
+          <div class="inline-block bg-n-medium-gray rounded-full p-3">
+            <img src="./assets/icon-star.3e70bfda.svg" alt="" class="sm:p-1" />
+          </div>
+          <h1 class="card__header">How did we do?</h1>
+
+          <p class="card__copy">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <div id="numbers" class="flex mt-7 justify-between">
+            <button type="button" tabindex="0" data-rate="1" class="circle">
+              1
+            </button>
+            <button type="button" tabindex="0" data-rate="2" class="circle">
+              2
+            </button>
+            <button type="button" tabindex="0" data-rate="3" class="circle">
+              3
+            </button>
+            <button type="button" tabindex="0" data-rate="4" class="circle">
+              4
+            </button>
+            <button type="button" tabindex="0" data-rate="5" class="circle">
+              5
+            </button>
+          </div>
+
+          <button
+            id="button"
+            type="submit"
+            class="button active:bg-n-white active:text-p-orange focus:bg-orange-600 hover:bg-orange-600"
+          >
+            Submit
+          </button>
+        </div>
+
+        <!-- thank you -->
+        <!-- hidden by default -->
+        <div id="tCard" class="card hidden mt-2 sm:pt-11 sm:pb-10">
+          <div class="flex justify-center">
+            <img src="./assets/illustration-thank-you.a52834b7.svg" alt="" />
+          </div>
+
+          <div class="mt-8 text-center">
+            <p
+              class="text-p-orange bg-n-medium-gray rounded-full p-1 px-6 inline-block"
+            >
+              You selected <span id="rating"></span> out of 5
+            </p>
+          </div>
+
+          <div class="card__header text-center mt-6 sm:mt-8">
+            <h2>Thank you!</h2>
+          </div>
+
+          <p class="card__copy text-center">
+            We appreciate you taking the time to give a rating. <span>If you ever need
+            more support, don't hesitate to get in touch!</span>
+          </p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
