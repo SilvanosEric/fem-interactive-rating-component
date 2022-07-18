@@ -46,8 +46,7 @@
     cursor: pointer;
   }
 
-  .circle:hover,
-  .circle:focus {
+  .circle:hover, .circle:focus {
     background-color: theme("colors.n-light-gray");
     color: theme("colors.n-white");
   }

@@ -14,7 +14,7 @@
     <div class="grid h-screen place-items-center">
       <main class="px-4">
         <!-- rating -->
-        <div class="card">
+        <div id="rCard" class="card">
           <div class="inline-block bg-n-medium-gray rounded-full p-3">
             <img src="images/icon-star.svg" alt="" />
           </div>
@@ -26,13 +26,24 @@
           </p>
 
           <div class="flex gap-6 mt-5">
-            <div tabindex="0" class="circle">1</div>
-            <div tabindex="0" class="circle">2</div>
-            <div tabindex="0" class="circle">3</div>
-            <div tabindex="0" class="circle">4</div>
-            <div tabindex="0" class="circle">5</div>
+            <button type="button" tabindex="0" data-rate="1" class="circle">
+              1
+            </button>
+            <button type="button" tabindex="0" data-rate="2" class="circle">
+              2
+            </button>
+            <button type="button" tabindex="0" data-rate="3" class="circle">
+              3
+            </button>
+            <button type="button" tabindex="0" data-rate="4" class="circle">
+              4
+            </button>
+            <button type="button" tabindex="0" data-rate="5" class="circle">
+              5
+            </button>
           </div>
           <button
+            id="button"
             type="submit"
             class="button active:bg-n-white active:text-p-orange focus:bg-orange-600 hover:bg-orange-600"
           >
@@ -41,7 +52,8 @@
         </div>
 
         <!-- thank you -->
-        <div class="card">
+        <!-- hidden by default -->
+        <div id="tCard" class="card hidden">
           <div class="flex justify-center">
             <img src="images/illustration-thank-you.svg" alt="" />
           </div>
@@ -54,7 +66,7 @@
             </p>
           </div>
 
-          <div class="card__header text-center mt-6" data-text="center">
+          <div class="card__header text-center mt-6">
             <h2>Thank you!</h2>
           </div>
 
