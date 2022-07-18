@@ -13,7 +13,7 @@
     max-width: 25.7rem;
   }
 
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: theme("screens.sm")) {
     .card {
       border-radius: 1.75rem;
       padding: theme("padding.8");
@@ -27,7 +27,7 @@
     margin-top: 0.515rem;
   }
 
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: theme("screens.sm")) {
     .card__header {
       margin-top: theme("margin.5");
       font-size: theme("fontSize.3xl");
@@ -39,7 +39,7 @@
     letter-spacing: theme("letterSpacing.tight");
   }
 
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: theme("screens.sm")) {
     .card__copy {
       margin-top: theme("margin[1]");
       letter-spacing: theme("letterSpacing.normal");
@@ -54,7 +54,7 @@
     aspect-ratio: 1 / 1;
   }
 
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: theme("screens.sm")) {
     .circle {
       width: theme("width[12]");
       width: theme("width.12")
@@ -89,9 +89,15 @@
     font-size: theme("fontSize.sm");
   }
 
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: theme("screens.sm")) {
     .button {
       margin-top: 2.25rem;
+    }
+  }
+
+  @media (min-width: 26.125rem) {
+    .card__copy span {
+      display: block;
     }
   }
 }
