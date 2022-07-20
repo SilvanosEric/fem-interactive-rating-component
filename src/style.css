@@ -62,7 +62,7 @@
   }
 
   .circle:hover,
-  .circle:focus {
+  .circle:focus-visible {
     background-color: theme("colors.n-light-gray");
     color: theme("colors.n-white");
   }
